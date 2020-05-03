@@ -13,7 +13,7 @@ This API uses [k-Anonymity model](https://en.wikipedia.org/wiki/K-anonymity) tha
   <img src="https://user-images.githubusercontent.com/55880211/78675721-1573e100-7903-11ea-8f9d-4e411b897e6f.png">
 </p>
 
-### Git Installation
+## Git Installation
 ```
 # clone the repo
 $ git clone https://github.com/sameera-madushan/Pwned.git
@@ -31,7 +31,7 @@ $ pip3 install -r requirements.txt
 python pwned.py -p <your password here>
 ```
 
-### Support & Contributions
+## Support & Contributions
 - Please ⭐️ this repository if this project helped you!
 - Contributions of any kind welcome!
 
