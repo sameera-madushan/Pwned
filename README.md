@@ -36,4 +36,4 @@ python pwned.py -p <your password here>
 - Contributions of any kind welcome!
 
 ## License
-MIT ©[sameera-madushan](https://github.com/sameera-madushan)
+Pwned is made with ♥ by [@_\_sa_miya__](https://twitter.com/__sa_miya__) and it is released under the MIT license.
