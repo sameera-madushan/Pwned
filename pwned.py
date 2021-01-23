@@ -18,20 +18,19 @@ def check_leak(x):
     url = "https://api.pwnedpasswords.com/range/{}".format(prefix)
 
     req = requests.get(url, headers=header).content.decode('utf-8')
-    hashes = req.split('\r\n')
+    # split the result twice - each line into key, value pairs of hash-postfixes and the usage count.
+    hashes = dict(t.split(":") for t in req.split('\r\n'))
 
-    for suffix in hashes:
-        hash_list = re.sub(r':(.*)', "", req).split('\n')
+    # add the prefix to the key values (hashes) of the hashes dictionary
+    hashes = dict((prefix + key, value) for (key, value) in hashes.items())
 
-    for i in hash_list:
-        real_hash = prefix + i
-        
-        if hash_string == real_hash:
+    for item_hash in hashes:
+        if item_hash == hash_string:
             print("\nOh no — pwned!")
-            print("{} has previously appeared in a data breach and should never be used. ".format(x))
+            print("{} has previously appeared in a data breach, used {} times, and should never be used. ".format(x,hashes[hash_string]))
             break
 
-    if hash_string != real_hash:
+    if hash_string != item_hash:
         print("\nGood news — no pwnage found!")
         print("{} wasn't found in any of the Pwned Passwords loaded into Have I Been Pwned.".format(x))
 
