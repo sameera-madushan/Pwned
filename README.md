@@ -12,7 +12,7 @@ You cn read the medium article that i wrote about this from [here.](https://medi
 
 ## How pwned script works
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/55880211/78675721-1573e100-7903-11ea-8f9d-4e411b897e6f.png">
+  <img src="https://github.com/user-attachments/assets/516643dd-6aee-4da8-8451-1e992cf4a4c6">
 </p>
 
 ## Git Installation
